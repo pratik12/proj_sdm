@@ -24,7 +24,7 @@ public class GlobalBusiness {
 		PreparedStatement pstmt2 = null;
 		ResultSet rs2 = null;
 		con = DBCon.getConnection();
-		
+		String S;
 		String pmtID = null;
 		String pmtName = null;
 		String returnText = null;
