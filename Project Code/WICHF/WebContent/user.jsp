@@ -13,11 +13,10 @@
 <!--    		<s:submit/> -->
    		
    		 <form action="user">
-     	
-      <input type="text" name="userId" value="User Id"/>
-      <input type="password" name="password" value="Password"/>
-      <input type="submit" value="Say Hello"/>
-   </form>
+     	      <input type="text" name="userId" value="User Id"/>
+		      <input type="password" name="password" value="Password"/>
+		      <input type="submit" value="Say Hello"/>
+		   </form>
    		
    		<hr/>
 <!--      </s:form> -->

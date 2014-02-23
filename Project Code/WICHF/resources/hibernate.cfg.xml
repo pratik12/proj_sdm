@@ -22,6 +22,8 @@
         
 <!--  	Configure the Model files here -->
         <mapping class="com.sdm.model.User" />
+        <mapping class="com.sdm.model.Doctor" />
+        <mapping class="com.sdm.model.Nurse" />
         <mapping class="com.sdm.model.Patient" />
  
     </session-factory>
