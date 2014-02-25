@@ -14,7 +14,7 @@
         <tr> 
           
           
-          <td width="19"><img src="images/logins.jpg"></td>
+          <td width="19"><img src="images/doctor.png" height = "50" width = "50"></td>
           <td width="100%"><a href="doctor.jsp">Doctor Registration</a></td>
         </tr>
         
