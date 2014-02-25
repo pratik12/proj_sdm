@@ -27,7 +27,6 @@ CREATE TABLE IF NOT EXISTS `WICHF`.`Patient` (
   `phone_no` DECIMAL(10,0) NULL,
   `patient_name` VARCHAR(45) NULL,
   `annual_checkup` VARCHAR(1) NOT NULL,
-  `Patientcol` VARCHAR(45) NULL,
   `user_id` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`patient_id`, `user_id`),
   INDEX `fk_Patient_User_idx` (`user_id` ASC),
@@ -99,12 +98,13 @@ CREATE TABLE IF NOT EXISTS `WICHF`.`Appointment` (
   `booked_date` DATE NOT NULL,
   `doctor_id` INT NULL,
   `room_id` INT NULL,
-  `Appointmentcol` VARCHAR(45) NULL,
   `parent_ppointment_id` INT NULL,
+  `user_id` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`appointment_id`, `parent_ppointment_id`),
   INDEX `fk_Appointment_Doctor1_idx` (`doctor_id` ASC),
   INDEX `fk_Appointment_Room1_idx` (`room_id` ASC),
   INDEX `fk_Appointment_Appointment1_idx` (`parent_ppointment_id` ASC),
+  INDEX `fk_Appointment_User1_idx` (`user_id` ASC),
   CONSTRAINT `fk_Appointment_Doctor1`
     FOREIGN KEY (`doctor_id`)
     REFERENCES `WICHF`.`Doctor` (`doctor_id`)
@@ -118,6 +118,11 @@ CREATE TABLE IF NOT EXISTS `WICHF`.`Appointment` (
   CONSTRAINT `fk_Appointment_Appointment1`
     FOREIGN KEY (`parent_ppointment_id`)
     REFERENCES `WICHF`.`Appointment` (`appointment_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Appointment_User1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `WICHF`.`User` (`user_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
