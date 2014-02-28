@@ -8,10 +8,13 @@ import org.hibernate.Hibernate;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Restrictions;
 
 import com.googlecode.s2hibernate.struts2.plugin.annotations.SessionTarget;
 import com.googlecode.s2hibernate.struts2.plugin.annotations.TransactionTarget;
 import com.sdm.model.Appointment;
+import com.sdm.model.Doctor;
 import com.sdm.model.Nurse;
 import com.sdm.model.User;
 import com.sdm.util.HibernateUtil;
@@ -69,11 +72,13 @@ public class AppointmentDAO {
 			}
 			e.printStackTrace();
 		}
-		
 	}
 		public Appointment saveAppointment(Appointment appointment)
 		   {
 			initializeTransaction();
+//			DetachedCriteria c = DetachedCriteria.forClass(Appointment.class);
+//			c.add(Restrictions.eq(String.valueOf(appointment.getDoctor().getDoctorId()), 45));
+//			c.getExecutableCriteria(session).;
 			session.save(appointment);
 			transaction.commit();
 			return appointment;

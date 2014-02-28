@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
 import javax.persistence.Table;
 
 @Entity
@@ -44,11 +45,12 @@ public class Appointment {
 	}
 
 	@ManyToOne(targetEntity = Doctor.class)
-	@JoinColumn(name="doctor_id")
-	private int doctorId;
+	@JoinColumn(name="doctor_id", referencedColumnName="doctor_id")
 	
-	@ManyToOne(targetEntity = Room.class)
-	@JoinColumn(name="room_id")
+	private Doctor doctor;
+	
+//	@ManyToOne(targetEntity = Room.class)
+//	@JoinColumn(name="room_id")
 	private int roomId;
 
 	public int getAppointmentId() {
@@ -100,21 +102,20 @@ public class Appointment {
 	}
 
 
-
-	public void setDoctorId(int doctorId) {
-		this.doctorId = doctorId;
-	}
-
-	public int getDoctorId() {
-		return doctorId;
-	}
-
 	public void setRoomId(int roomId) {
-		this.roomId = 65;
+		this.roomId = roomId;
 	}
 
 	public int getRoomId() {
 		return roomId;
+	}
+
+	public void setDoctor(Doctor doctor) {
+		this.doctor = doctor;
+	}
+
+	public Doctor getDoctor() {
+		return doctor;
 	}
 	
 	

@@ -40,8 +40,8 @@ public class AppointmentAction extends ActionSupport
 		 appointment.setActive(true);
 		 appointment.setBookedDate(null);
 		 appointment.setBookedThrough("Vishnu");
-		 appointment.setDoctorId(45);
-		 appointment.setRoomId(65);
+		 appointment.setDoctor(doctor);
+		// appointment.setRoom();
 		 appointment.setTimeSlot(20);
 		 appointment.setVisitTypeId(1); //need to put visit type id object
 
@@ -57,15 +57,15 @@ public class AppointmentAction extends ActionSupport
 		 
 	 }
 	 
-	 public String updateAppointment(int appointmentId)
-	 {
-		 System.out.println("*********");
-		 appointmentDAO.updateAppointment(appointment, 
-			 appointment.getAppointmentDate(),
-				 appointmentId, appointment.getTimeSlot(), 
-				 appointment.getDoctorId());
-		return "success";
-	 }
+//	 public String updateAppointment(int appointmentId)
+//	 {
+//		 System.out.println("*********");
+//		 appointmentDAO.updateAppointment(appointment, 
+//			 appointment.getAppointmentDate(),
+//				 appointmentId, appointment.getTimeSlot(), 
+//				 appointment.getDoctorId());
+//		return "success";
+//	 }
 
 	private int id() {
 		
@@ -82,6 +82,14 @@ public class AppointmentAction extends ActionSupport
 
 	public User getUser() {
 		return user;
+	}
+
+	public void setDoctor(Doctor doctor) {
+		this.doctor = doctor;
+	}
+
+	public Doctor getDoctor() {
+		return doctor;
 	}
 
 	

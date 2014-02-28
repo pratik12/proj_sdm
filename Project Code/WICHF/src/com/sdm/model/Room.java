@@ -26,7 +26,7 @@ public class Room {
 	}
 
 	public void setRoomId(int roomId) {
-		this.roomId = 65;
+		this.roomId = roomId;
 	}
 
 	public int getRoomNumber() {
