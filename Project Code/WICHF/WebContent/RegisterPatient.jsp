@@ -76,79 +76,49 @@
 </SCRIPT>
 </head>
 <body>
+<center><h3>Registration</h3></center>
 	
-	<table width="100%" border="0" cellpadding="0" cellspacing="1"
-		bgcolor="">
-		<tr bgcolor="">
-			<td align="center">
-			<form action="registerPatient" 	method="post" onsubmit="return validateForm(this);" >
+	<form action="registerPatient" 	method="post" onsubmit="return validateForm(this);" >
+<TABLE align="center">
+  <TR>
+    <TD>Name</TD>
+    <TD><INPUT TYPE="TEXT" NAME="name" value=" " SIZE="20"></TD>
+          
+  </TR>
+  <TR>
+    <TD>Health Card Number</TD>
+    <TD><INPUT TYPE="TEXT" NAME="healthCardNumber" value=" " SIZE="20"></TD>
+  </TR>
+  <TR>
+    <TD>Birth Date(yyyy-mm-dd)</TD>
+    <TD><INPUT TYPE="TEXT" NAME="birthDate" value=" " SIZE="20"></TD>
+  </TR>
+  <TR>
+    <TD>Gender(M/F)</TD>
+    <TD><INPUT TYPE="TEXT" NAME="gender" value=" " SIZE="20"></TD>
+  </TR>
+  <TR>
+    <TD>Annual CheckUp Done(Y/N)</TD>
+    <TD><INPUT TYPE="TEXT" NAME="isAnnualCheckUpDone" value=" " SIZE="20"></TD>
+  </TR>
+  <TR>
+    <TD>UserId</TD>
+    <TD><INPUT TYPE="TEXT" NAME="user.userId" value=" " SIZE="20"></TD>
+  </TR>
+  <TR>
+    <TD>Password</TD>
+    <TD><INPUT TYPE="TEXT" NAME="user.password" value=" " SIZE="20"></TD>
+  </TR>
+  <TR>
+    <TD>Re Enter Password</TD>
+    <TD><INPUT TYPE="TEXT" NAME="Spassword" value=" " SIZE="20"></TD>
+  </TR>
+  <tr>
+  <td>
+  <INPUT align="middle" TYPE="SUBMIT" VALUE="Register" NAME="B1">
+  </td>
+  </tr>
+</TABLE>
 
-
-					<!--  <font color="red"> <html:errors /></font>-->
-
-					<table border="0" bgcolor="#6699CC" cellpadding="0" cellspacing="1">
-
-						<tr bgcolor="#6699CC">
-							<td align="center" colspan="2"><font style="color: white"
-								size="4">Account Registration</font></td>
-						</tr>
-
-						<tr>
-							<td align="center" colspan="2"><font style="color: white"
-								size="2">Fields marked with * are mandate Fields</font></td>
-						</tr>
-						
-						<tr bgcolor="#FFFFFF">
-							<td align="right" width="200"><font size="3" face="Monotype Corsiva" style="color: #6699CC">Health Card Number:</font></td>
-							<td align="left"><input type="text" name="healthCardNumber" value="" /></td>
-							<td><font style="color: red">*</font></td>
-						</tr>
-						<tr bgcolor="#FFFFFF">
-							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC">Birth Date(yyyy-mm-dd):</font></td>
-							<td align="left"><input type="text" name="birthDate" value="" /></td>
-							<td><font style="color: red">*</font></td>
-						</tr>
-						<tr bgcolor="#FFFFFF">
-							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC">Gender(M/F):</font></td>
-							<td align="left" colspan="2"><input type="text" name="gender" value="" /></td>
-							
-						</tr>
-						<tr bgcolor="#FFFFFF">
-							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC">Name: </font></td>
-							<td align="left"><input type="text" name="name" value="" /></td>
-							<td><font style="color: red">*</font></td>
-						</tr>
-						<tr bgcolor="#FFFFFF">
-							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC">Annual CheckUp Done(Y/N): </font></td>
-							<td align="left"><input type="text" name="isAnnualCheckUpDone" value="" /></td>
-							<td><font style="color: red">*</font></td>
-						</tr>
-						<tr bgcolor="#FFFFFF">
-							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC">UserId: </font></td>
-							<td align="left"><input type="text" name="user.userId"  /></td>
-							<td><font style="color: red">*</font></td>
-						</tr>
-						<tr bgcolor="#FFFFFF">
-							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC">Password: </font></td>
-							<td align="left"><input type="text" name="user.password"  /></td>
-							<td><font style="color: red">*</font></td>
-						</tr>
-						
-						<tr bgcolor="#FFFFFF">
-							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC"> Re Enter Password: </font></td>
-							<td align="left"><input type="text" name="Spassword" value="" /></td>
-							<td><font style="color: red">*</font></td>
-						</tr>
-
-						
-						<tr bgcolor="#FFFFFF">
-							<td align="center" colspan="3"><input type="submit" value="Save" />
-
-							</td>
-						</tr>
-					</table>
-
-				</form></td>
-		</tr>
-	</table>
+</form>
 <%@ include file="footer.jsp" %>

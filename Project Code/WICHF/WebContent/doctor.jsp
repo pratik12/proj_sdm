@@ -8,6 +8,7 @@
 <title>Add Doctor</title>
 </head>
 <body>
+<center><h2>Doctor Registration</h2></center>
 	<form action="addDoctor">
 			 
 			 Doctor Name:  <input type="text" name="doctorName" value=""/>

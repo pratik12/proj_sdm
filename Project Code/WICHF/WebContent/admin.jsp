@@ -4,8 +4,8 @@
 <%@ include file="header.jsp" %>
 
 
-<center><h1> Welcome!</h1></center>
-       <table width="100%" border="0" cellspacing="0" cellpadding="0">
+<center><h1> Welcome Admin!</h1></center>
+       <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
        <tr> 
           <td width="19">&nbsp;</td>
           <td width="100%">&nbsp;</td>
@@ -14,8 +14,15 @@
         <tr> 
           
           
-          <td width="19"><img src="images/doctor.png" height = "50" width = "50"></td>
+          <td  width="19"><img src="images/doctor.png" height = "50" width = "50"></td>
           <td width="100%"><a href="doctor.jsp">Doctor Registration</a></td>
+        </tr>
+        
+        <tr> 
+          
+          
+          <td width="19"><img src="images/nurse.png" height = "50" width = "50"></td>
+          <td width="100%"><a href="nurse.jsp">Nurse Registration</a></td>
         </tr>
         
         </table>
