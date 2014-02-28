@@ -17,6 +17,8 @@ public class PatientAction extends ActionSupport implements ModelDriven<Patient>
 	 */
 	private static final long serialVersionUID = 1L;
 
+	
+	
 	Patient patient = new Patient();
 	User user = new User();
 	UserDAO userDAO = new UserDAO();
