@@ -1,8 +1,12 @@
 package com.sdm.model;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -13,11 +17,13 @@ public class Patient {
 	@Column(name="patient_id")
 	private int patientId;
 	
-	@Column(name="h_Card_no")
+	@Column(name="h_card_no")
 	private String healthCardNumber;
 	
 	@Column(name="birth_date")
-	private String birthDate;
+	private Date birthDate;
+	
+	//private String formDate;
 	
 	@Column(name="gender")
 	private String gender;
@@ -31,14 +37,12 @@ public class Patient {
 	@Column(name="annual_checkup")
 	private boolean isAnnualCheckUpDone;
 	
-	@Column(name="Patientcol")
-	private String patientCol;
 	
-	@Column(name="user_id")
-	private String userId;
+	@OneToOne
+    @JoinColumn(name="user_id")
+	private User user;
 
-	private String password;
-	
+
 	public int getPatientId() {
 		return patientId;
 	}
@@ -51,11 +55,12 @@ public class Patient {
 	public void setHealthCardNumber(String healthCardNumber) {
 		this.healthCardNumber = healthCardNumber;
 	}
-	public String getBirthDate() {
+
+	public Date getBirthDate() {
 		return birthDate;
 	}
 	public void setBirthDate(String birthDate) {
-		this.birthDate = birthDate;
+		this.birthDate = Date.valueOf(birthDate);;
 	}
 	public String getGender() {
 		return gender;
@@ -63,6 +68,13 @@ public class Patient {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+//	public String getFormDate() {
+//		return formDate;
+//	}
+//	public void setFormDate(String formDate) {
+//		this.formDate = formDate;
+//		this.birthDate = Date.valueOf(formDate); //Format should be yyyy-MM-dd
+//	}
 	public int getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -81,26 +93,14 @@ public class Patient {
 	public void setAnnualCheckUpDone(boolean isAnnualCheckUpDone) {
 		this.isAnnualCheckUpDone = isAnnualCheckUpDone;
 	}
-	public String getPatientCol() {
-		return patientCol;
-	}
-	public void setPatientCol(String patientCol) {
-		this.patientCol = patientCol;
-	}
-	public String getUserId() {
-		return userId;
-	}
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
 	
-	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	
 	
 	

@@ -79,8 +79,9 @@
 	<table width="100%" border="0" cellpadding="0" cellspacing="1"
 		bgcolor="">
 		<tr bgcolor="">
-			<td align="center"><form action="registerPatient"
-					method="post" onsubmit="return validateForm(this);">
+			<td align="center">
+			<form action="registerPatient" 	method="post" onsubmit="return validateForm(this);" >
+
 
 					<!--  <font color="red"> <html:errors /></font>-->
 
@@ -102,7 +103,7 @@
 							<td><font style="color: red">*</font></td>
 						</tr>
 						<tr bgcolor="#FFFFFF">
-							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC">Birth Date(dd-mm-yyyy):</font></td>
+							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC">Birth Date(yyyy-mm-dd):</font></td>
 							<td align="left"><input type="text" name="birthDate" value="" /></td>
 							<td><font style="color: red">*</font></td>
 						</tr>
@@ -123,12 +124,12 @@
 						</tr>
 						<tr bgcolor="#FFFFFF">
 							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC">UserId: </font></td>
-							<td align="left"><input type="text" name="userId" value="" /></td>
+							<td align="left"><input type="text" name="user.userId"  /></td>
 							<td><font style="color: red">*</font></td>
 						</tr>
 						<tr bgcolor="#FFFFFF">
 							<td align="right"> <font size="3" face="Monotype Corsiva" style="color: #6699CC">Password: </font></td>
-							<td align="left"><input type="text" name="password" value="" /></td>
+							<td align="left"><input type="text" name="user.password"  /></td>
 							<td><font style="color: red">*</font></td>
 						</tr>
 						
@@ -140,7 +141,7 @@
 
 						
 						<tr bgcolor="#FFFFFF">
-							<td align="center" colspan="3"><input type="submit" value="Save">
+							<td align="center" colspan="3"><input type="submit" value="Save" />
 
 							</td>
 						</tr>

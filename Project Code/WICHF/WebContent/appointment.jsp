@@ -4,21 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Add User</title>
+<title>Make Appointment</title>
 </head>
 <body>
-<!-- 	 <s:form action="user"> -->
-<!-- 	   <s:textfield name="userId" label="User Id"/> -->
-<!-- 	   <s:textfield name="password" label="Password"/> -->
-<!--    		<s:submit/> -->
-   		
-   		 <form action="user">
+ <form action="appointment">
      	      <input type="text" name="userId" value="User Id"/>
 		      <input type="password" name="password" value="Password"/>
 		      <input type="submit" value="Say Hello"/>
 		   </form>
-   		
-   		<hr/>
-<!--      </s:form> -->
 </body>
 </html>

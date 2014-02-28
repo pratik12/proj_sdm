@@ -9,7 +9,6 @@ import org.hibernate.Transaction;
 import com.googlecode.s2hibernate.struts2.plugin.annotations.SessionTarget;
 import com.googlecode.s2hibernate.struts2.plugin.annotations.TransactionTarget;
 import com.sdm.model.Patient;
-import com.sdm.model.User;
 import com.sdm.util.HibernateUtil;
 
 
@@ -36,7 +35,7 @@ public class PatientDAO {
 		      return patients;
 		   }
 		
-		public void addPatient(Patient patient)
+		public Patient addPatient(Patient patient)
 		   {
 			try{
 				session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -50,6 +49,7 @@ public class PatientDAO {
 				e.printStackTrace();
 			}
 			transaction.commit();
+			return patient;
 		   }
 
 		

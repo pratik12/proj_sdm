@@ -19,28 +19,13 @@
          <result name="success"> /user.jsp </result>
       </action>
       
-      <action name="addDoctor" method="addDoctor"
-         class="com.sdm.controller.DoctorAction">
-         <result name="success"> /doctor.jsp </result>
-      </action>
-      <action name="addPatient" method="addPatient"
+      <action name="registerPatient" method="addPatient"
          class="com.sdm.controller.PatientAction">
-         <result name="success"> /patient.jsp </result>
-<!--          <result name="input"> /patient.jsp </result> -->
-      </action>
-      <action name="addNurse" method="addNurse"
-         class="com.sdm.controller.NurseAction">
-         <result name="success"> /nurse.jsp </result>
-      </action>
-      
-      <action name="appointment" method="makeAppointment"
-         class="com.sdm.controller.AppointmentAction">
-         <result name="success"> /appointment.jsp </result>
+         <result name="success"> /RegisterPatient.jsp </result>
       </action>
       
       <action name="">
-		 
-		  <result>/appointment.jsp</result>
+		  <result>/RegisterPatient.jsp</result>
 		</action>
    </package>
 </struts>
